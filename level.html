@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Level Progress - Solo Leveling Tracker</title>
+	<style>
+		body{
+			background-color: #111;
+			color: #fff;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			padding: 20px;
+			text-align: center;
+		}
+
+		h1{
+			color: #00f0ff;
+			margin-bottom: 20px;
+		}
+
+		.progress-section{
+			background-color: #222;
+			border: 1px solid #333;
+			border-radius: 10px;
+			padding: 20px;
+			max-width: 600px;
+			margin: 20px auto;
+		}
+
+		.progres-bar{
+			background-color: #444;
+			border-radius: 10px;
+			overflow: hidden;
+			height: 30px;
+			margin-top: 10px;
+			box-shadow: 0 0 5px #00f0ff66;
+		}
+
+		.progress-fill{
+			background-color: #00f0ff;
+			height: 100%;
+			width: 0%;
+			transition: width 1.5s ease-out;
+			box-shadow: 0 0 20px #00f0ff;
+		}
+
+		.level-info{
+			margin-top: 15px;
+			font-size: 1.2rem;
+		}
+
+		table{
+			width: 90%;
+			margin: 30px auto;
+			border-collapse: collapse;
+		}
+
+		th, td{
+			padding: 10px;
+			border: 1px solid;
+		}
+
+		th{
+			background-color: #222;
+			color: #00f0ff;
+		}
+
+		td{
+			background-color: #181818;
+		}
+
+		a{
+			color: #00f0ff;
+			text-decoration: none;
+		}
+
+		a:hover{
+			text-decoration: none;
+		}
+
+		footer{
+			margin-top: 40px;
+			font-size: 0.9rem;
+			color: #aaa;
+		}
+	</style>
+</head>
+<body>
+	<h1>Sung Jinwoo's Level Progress</h1>
+	<div class="progress-section">
+		<p class="Level-info">Curent Level: <strong>56</strong></p>
+		<div class="progress-bar">
+		  <div class="progres-fill"></div>
+		</div>
+		<p>XP: 19,000 / 20,000</p>
+	</div>
+
+	<table>
+		<tr>
+			<th>Level</th>
+			<th>Milestone</th>
+			<th>Unlocked</th>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Shadow Extraction</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>25</td>
+			<td>Stealth Mode</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>50</td>
+			<td>Beru Summon</td>
+			<td>Yes</td>
+		</tr>
+		<tr>
+			<td>75</td>
+			<td>Shadow Army Expansion</td>
+			<td>No</td>
+		</tr>
+	</table>
+
+	<footer>
+		<p><a href="index.html">Back To Home</a></p>
+		<p><a href="stats.html">Character Stats</a></p>
+		<p><a href="about.html">About Us</a></p>
+	</footer>
+
+	<script>
+		window.addEventLister('DOMContentLoaded', () =>
+		{
+			const fill =
+			document.querySelector('.progress-fill');
+			setTimeout(() => {
+				fill.style.width = '56%';
+
+			}, 500);
+		});
+	</script>
+</body>
+</html>
